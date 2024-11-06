@@ -14,6 +14,10 @@ app.get("/search", async (req, res) => {
     res.send({ response: result.response.text() });
 });
 
+app.get("/status", (req, res) => {
+    res.send({ status: "ok" });
+});
+
 app.listen(3000, () => {
     console.log("Server is running at port 3000");
 });
