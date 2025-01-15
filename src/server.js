@@ -1,5 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const express = require("express");
+const path = require("path");
 
 const app = express();
 
@@ -16,6 +17,12 @@ app.get("/search", async (req, res) => {
 
 app.get("/status", (req, res) => {
     res.send({ status: "ok" });
+});
+
+app.get("/video", (req, res) => {
+    console.log("playing");
+    const vidPath = path.join(__dirname, "../", "./storage/video.mp4");
+    res.sendFile(vidPath);
 });
 
 app.listen(3000, () => {
