@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 
-const genAI = new GoogleGenerativeAI("AIzaSyA7_jMqmhVoZT7Cn5zZDxJ0HAGQTR5B9kQ");
+const genAI = new GoogleGenerativeAI("AIzaSyC8KgqfWPBx7qDo2z3kOJ5h2P4LioAErck");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 app.get("/search", async (req, res) => {
